@@ -34,10 +34,7 @@ public  class ZipServicev2 extends ZipServicev1 {
 		if(((City) addressArr.get(i)).getZipCode()==zipCode) {
 			System.out.println(addressArr.get(i));
 		}
-	public void validate(int zipCode)
-	{
-		
-	}
+	
 	}
 }
 	
