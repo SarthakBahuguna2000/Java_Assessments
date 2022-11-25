@@ -36,6 +36,16 @@ public  class ZipServicev2 extends ZipServicev1 {
 		}
 	
 	}
+		
 }
-	
+    public void validate(String zipCode)
+	{
+		
+	try{
+	     Integer.parseInt(zipCode);
+	}
+	catch (NumberFormatException ex) {
+		System.out.println(zipCode + " is not a valid integer");
+	}
+	}	
 }
