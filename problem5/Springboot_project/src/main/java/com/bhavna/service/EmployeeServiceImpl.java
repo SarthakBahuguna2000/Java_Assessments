@@ -19,8 +19,7 @@ public class EmployeeServiceImpl  implements EmployeeService{
 	
 	@Override
 	public void addEmployee(Employee emp) {
-		// TODO Auto-generated method stub
-		//empLst.add(emp);
+		
 		employeeDao.save(emp);
 		System.out.println("Data Added successfully");
 		
@@ -28,21 +27,19 @@ public class EmployeeServiceImpl  implements EmployeeService{
 
 	@Override
 	public List<Employee> getActiveEmployees() {
-		// TODO Auto-generated method stub
-		//List<Employee> res=empLst.stream().filter(s->s.getStatus().contentEquals("Active")).collect(Collectors.toList());
+	
 		return employeeDao.findAll().stream().filter(s->s.getStatus().contentEquals("Active")).collect(Collectors.toList());
 	}
 
 	@Override
 	public List<Employee> getEmployees() {
-		// TODO Auto-generated method stub
+		
 		return employeeDao.findAll();
 	}
 
 	@Override
 	public Employee searchEmployee(int eId) {
-		// TODO Auto-generated method stub
-		//(Employee)empLst.stream().filter(s->s.getEmpId()==eId);
+	
 		return employeeDao.getReferenceById(eId);
 	}
 
